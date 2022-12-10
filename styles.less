@@ -1,0 +1,47 @@
+input[type=radio] {
+    // display: none; 
+    &:checked {
+        + .box {
+            background: red;
+            span {
+                color: white;
+                transform:translateY(20px);
+            }
+        }
+    }
+}
+
+legend {
+    color: red;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    background:blue;
+}
+
+
+.box-text {
+    // position: absolute;
+    transform: translate(0, 60px);
+    left: 0;
+    right: 0;
+    transition: all 300ms ease;
+    font-size: 1.5em;
+    user-select: none;
+    color: purple;
+    &:before {
+      font-size: 1.2em;
+      font-family: FontAwesome;
+      display: block;
+      transform: translateY(-80px);
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+      font-weight: normal;
+      color: red;
+    }
+  }

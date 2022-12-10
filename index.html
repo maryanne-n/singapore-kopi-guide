@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="less.js" ></script> -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Kopi Orders</title>
+</head>
+<body>
+    <div class="wrapper">
+      <section id="kopi-maker" class="wrapper_content">
+        <fieldset id="milk-level">
+          <legend>Milkiness</legend>
+          <div class="level-wrapper">
+            <div class="box">
+              <label for="no-milk">
+                <input type="radio" id="no-milk" name="milk" value="none">
+                <span class="box-text">No milk</span>
+              </label>  
+            </div>
+            <div class="box">
+              <label>
+                <input type="radio" id="condensed-milk" name="milk" value="condensed">
+                <span class="box-text">Condensed milk</span>
+              </label>
+            </div>  
+            <div class="box">
+              <label>
+                <input type="radio" id="evaporated-milk" name="milk" value="evaporated">
+                <span class="box-text">Evaporated milk</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+  
+        <fieldset id="caffeine-level">
+          <legend>Strength</legend>            
+          <div class="level-wrapper">
+            <div class="box">
+              <label>                
+                <input type="radio" id="weak-strength" name="strength" value="weak-strength">
+                <span class="box-text">Weak</span>
+              </label>  
+            </div>
+            <div class="box">
+              <label>                
+                <input type="radio" id="normal-strength" name="strength" value="normal-strength">
+                <span class="box-text">Normal strength</span>
+              </label> 
+            </div>
+            <div class="box">
+              <label>
+                <input type="radio" id="strong-strength" name="strength" value="strong-strength">
+                <span class="box-text">Strong</span>
+              </label>  
+            </div>
+            <div class="box">
+              <label>
+                <input type="radio" id="x-strong-strength" name="strength" value="x-strong-strength">
+                <span class="box-text">Extra strong (no water)</span>
+              </label>
+            </div>
+          </div>
+        </fieldset>
+  
+        <fieldset>
+          <legend>Sweetness</legend>     
+          <div class="level-wrapper">
+            <div class="box">
+              <label>
+                <input type="radio" id="no-sugar" name="sugar" value="no-sugar">
+                <span class="box-text">No sugar</span>
+              </label>
+            </div>
+            <div class="box">
+              <label>
+                <input type="radio" id="less-sugar" name="sugar" value="less-sugar">
+                <span class="box-text">Less sugar</span>
+              </label>
+            </div>
+            <div class="box">
+              <label>
+                <input type="radio" id="normal-sugar" name="sugar" value="normal-sugar" checked>
+                <span class="box-text">Normal sugar</span>
+              </label>
+            </div>
+            <div class="box">
+              <label>
+                <input type="radio" id="extra-sugar" name="sweetness" value="extra-sugar">
+                <span class="box-text">Extra sugar</span>
+              </label>
+            </div>
+          </div>
+        </fieldset> 
+      </section>
+  
+      <section id="result" class="wrapper_content">      
+        <div id="kopi" class="kopi-iced">
+          <div class="sugar">
+  
+          </div>
+          <div class="cup">
+  <!--           <div class="ingredients-wrapper"> -->
+              <div class="ingredients">
+                <div class="water" id="water"></div>
+                <div class="milk" id="milk"></div>
+                <div class="coffee" id="coffee"></div>
+  <!--             </div> -->
+            </div>
+            <div class="temp">
+              <!-- <div class="ice">
+                <div class="ice-cube"></div>
+                <div class="ice-cube"></div>
+                <div class="ice-cube"></div>
+              </div> -->
+              <div class="smoke smoke1">
+                <div class="dot dot1"></div>
+                <div class="dot dot2"></div>
+                <div class="dot dot3"></div>
+                <div class="dot dot4"></div>
+                <div class="dot dot5"></div>
+                <div class="dot dot6"></div>
+              </div>
+              <div class="smoke smoke2">
+                <div class="dot dot1"></div>
+                <div class="dot dot2"></div>
+                <div class="dot dot3"></div>
+                <div class="dot dot4"></div>
+                <div class="dot dot5"></div>
+                <div class="dot dot6"></div>
+              </div>
+            </div>
+  
+          </div>
+          <div class="saucer">
+  
+          </div>
+        </div>
+      </section>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <!-- <script>
+      $(document).ready(function() {
+
+$('#milky-level input').on('change', function() {
+    let milkiness = $('input[name=milkiness]:checked', '#milky-level').val();
+    
+    alert($('input[name=milkiness]:checked', '#milky-level').val());
+    console.log(milkiness);
+    
+  });
+  
+  if ($(".cup").hasClass("cold")) {
+    $(".ingredients").addClass("no-clip");
+  }
+});
+    </script> -->
+  </body>
+  
+ 
+</html>
