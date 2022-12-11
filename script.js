@@ -54,6 +54,7 @@ function checkCoffee() {
 
 let kopiMaker = document.getElementById("kopi-maker");
 let kopiName = document.getElementById("kopi-name");
+
 kopiMaker.addEventListener("change", function() {
 
   checkCoffee();
@@ -141,6 +142,33 @@ kopiMaker.addEventListener("change", function() {
       }
       break;
   }
+
+  switch(newSugar) {
+    case "no-sugar":
+      console.log("no sugar");
+      switch(newMilkiness) {
+        case "condensed":
+          console.log("invalid! condensed milk has sugar");
+          break;
+        default:
+          kopiName.textContent += " Kosong";
+          break;
+      }
+      break;
+    case "less-sugar":
+      console.log("less sugar");
+      kopiName.textContent += " Siu Dai";
+      break;
+    case "normal-sugar":
+      console.log("normal sugar");
+      kopiName.textContent += "";
+      break;
+    case "extra-sugar":
+      console.log("extra sugar");
+      kopiName.textContent += " Gah Dai";
+      break;
+      }
+
 
 
 

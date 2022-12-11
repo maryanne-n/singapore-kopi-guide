@@ -349,3 +349,16 @@ legend {
   text-align: center;
   margin: 20px;
 }
+
+.sugar {
+  width: 28px;
+  height: 28px;
+  background-color: #d9dbde;
+  border-radius: 2px;
+  transform: rotate(40deg);
+  margin: 0;
+  left: 30px;
+  top: -10px;
+  position: absolute;
+  box-shadow: 40px -20px 0 #d9dbde, 40px 20px 0 #d9dbde;
+}
