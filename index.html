@@ -13,6 +13,10 @@
     <title>Kopi Orders</title>
 </head>
 <body>
+  <div class="introduction">
+    <h1>Confused by how to order coffee in Singapore?</h1>
+    <p>Here's a guide to help you order like a pro!</p>
+  </div>
     <div class="wrapper">
       <section id="kopi-maker" class="wrapper_content">
         <fieldset id="milk-level">
@@ -102,9 +106,7 @@
   
       <section id="result" class="wrapper_content">      
         <div id="kopi" class="kopi-iced">
-          <div class="sugar">
-  
-          </div>
+          <div id="sugar"></div>
           <div class="cup">
             <div class="ingredients">
               <div class="water" id="water"></div>
@@ -137,8 +139,18 @@
   
           </div>
           <div class="saucer"></div>
-          <div id="kopi-name">Kopi</div>
+          
         </div>
+
+        <div id="kopi-name">Kopi</div>
+
+        <div id="error-bean" class="empty invisibility">
+          <div class="bean">
+            <div class="split split1 bean-clip"></div>
+            <div class="split split2 bean-clip"></div>
+          </div>          
+        </div>
+
       </section>
     </div>
     <script type="text/javascript" src="script.js"></script>

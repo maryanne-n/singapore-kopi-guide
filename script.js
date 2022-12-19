@@ -14,25 +14,25 @@
   let sugarSelect = document.getElementById("normal-sugar");
   sugarSelect.checked = true;
   
-const coffee = document.querySelector(".coffee");
-const milk = document.querySelector(".milk");
-const water = document.querySelector(".water");
+const coffee = document.getElementById("coffee");
+const milk = document.getElementById("milk");
+const water = document.getElementById("water");
 const cup = document.querySelector(".cup");
+const errorBean = document.getElementById("error-bean");
 
-coffeeHeight = coffee.offsetHeight;
+// let coffeeHeight = coffee.offsetHeight;
+// let waterHeight = water.offsetHeight;
+// let cupHeight = cup.offsetHeight - 12;
 
-waterHeight = water.offsetHeight;
-cupHeight = cup.offsetHeight - 12;
-
-let coffeeNewHeight = document.getElementById("coffee").style.height;
-console.log(coffeeNewHeight);
+// let coffeeNewHeight = document.getElementById("coffee").style.height;
+// console.log(coffeeNewHeight);
 
 // total height of the ingredients
-ingredientHeight = cupHeight* 0.9;
+// ingredientHeight = cupHeight* 0.9;
 
 
-let coffeeHeightPercent = Math.round((coffeeHeight / 144) * 100);
-let waterHeightPercent = Math.round((waterHeight / 144) * 100);
+// let coffeeHeightPercent = Math.round((coffeeHeight / 144) * 100);
+// let waterHeightPercent = Math.round((waterHeight / 144) * 100);
 let coffeeStrength;
 // let milkTypes, strengthTypes;
 // let newMilkiness, newCaffeine;
@@ -43,6 +43,7 @@ let strengthTypes = document.getElementsByName('strength');
 let newCaffeine = document.querySelector('input[name="strength"]:checked').value;
 let sugarTypes = document.getElementsByName('sugar');
 let newSugar = document.querySelector('input[name="sugar"]:checked').value;
+let sugarCubes = document.getElementById('sugar');
 
 function checkCoffee() {
   
@@ -65,26 +66,26 @@ kopiMaker.addEventListener("change", function() {
       document.getElementById("milk").style.height = 0 + "%";
       switch(newCaffeine) {
         case "weak-strength":
-          document.getElementById("coffee").style.height = 40 + "%";
-          document.getElementById("water").style.height = 60 + "%";
+          coffee.style.height = 40 + "%";
+          water.style.height = 60 + "%";
           kopiName.textContent = "Kopi O Po";
            break;
         case "normal-strength":
           console.log("no milk normal strength");
-          document.getElementById("coffee").style.height = 50 + "%";
-          document.getElementById("water").style.height = 50 + "%";
+          coffee.style.height = 50 + "%";
+          water.style.height = 50 + "%";
           kopiName.textContent = "Kopi O";
           break;
         case "strong-strength":
           console.log("no milk strong strength");
-          document.getElementById("coffee").style.height = 60 + "%";
-          document.getElementById("water").style.height = 40 + "%";
+          coffee.style.height = 60 + "%";
+          water.style.height = 40 + "%";
           kopiName.textContent = "Kopi O Gao";
           break;
         case "x-strong-strength":
           console.log("no milk x strong strength");
-          document.getElementById("coffee").style.height = 100 + "%";
-          document.getElementById("water").style.height = 0 + "%";
+          coffee.style.height = 100 + "%";
+          water.style.height = 0 + "%";
           kopiName.textContent = "Kopi O Di Lo";
           break;
       }
@@ -94,49 +95,49 @@ kopiMaker.addEventListener("change", function() {
       document.getElementById("milk").style.height = 20 + "%";
       switch(newCaffeine) {
         case "weak-strength":
-          document.getElementById("coffee").style.height = 30 + "%";
-          document.getElementById("water").style.height = 50 + "%";
+          coffee.style.height = 30 + "%";
+          water.style.height = 50 + "%";
           kopiName.textContent = "Kopi Po";
           break;
         case "normal-strength":
-          document.getElementById("coffee").style.height = 40 + "%";
-          document.getElementById("water").style.height = 40 + "%";
+          coffee.style.height = 40 + "%";
+          water.style.height = 40 + "%";
           kopiName.textContent = "Kopi";
           break;
         case "strong-strength":
-          document.getElementById("coffee").style.height = 50 + "%";
-          document.getElementById("water").style.height = 30 + "%";
+          coffee.style.height = 50 + "%";
+          water.style.height = 30 + "%";
           kopiName.textContent = "Kopi Gao";
           break;
         case "x-strong-strength":
-          document.getElementById("coffee").style.height = 80 + "%";
-          document.getElementById("water").style.height = 0 + "%";
+          coffee.style.height = 80 + "%";
+          water.style.height = 0 + "%";
           kopiName.textContent = "Kopi Di Lo";
           break;
       }
       break;
     case "evaporated":
-      document.getElementById("milk").style.backgroundColor = "#FFDCA6";
-      document.getElementById("milk").style.height = 20 + "%";
+      milk.style.backgroundColor = "#FFDCA6";
+      milk.style.height = 20 + "%";
       switch(newCaffeine) {
         case "weak-strength":
-          document.getElementById("coffee").style.height = 30 + "%";
-          document.getElementById("water").style.height = 50 + "%";
+          coffee.style.height = 30 + "%";
+          water.style.height = 50 + "%";
           kopiName.textContent = "Kopi C Po";
           break;
         case "normal-strength":
-          document.getElementById("coffee").style.height = 40 + "%";
-          document.getElementById("water").style.height = 40 + "%";
+          coffee.style.height = 40 + "%";
+          water.style.height = 40 + "%";
           kopiName.textContent = "Kopi C";
           break;
         case "strong-strength":
-          document.getElementById("coffee").style.height = 50 + "%";
-          document.getElementById("water").style.height = 30 + "%";
+          coffee.style.height = 50 + "%";
+          water.style.height = 30 + "%";
           kopiName.textContent = "Kopi C Gao";
           break;
         case "x-strong-strength":
-          document.getElementById("coffee").style.height = 80 + "%";
-          document.getElementById("water").style.height = 0 + "%";
+          coffee.style.height = 80 + "%";
+          water.style.height = 0 + "%";
           kopiName.textContent = "Kopi C Di Lo";
           break;
       }
@@ -144,30 +145,41 @@ kopiMaker.addEventListener("change", function() {
   }
 
   switch(newSugar) {
+    // errorBean.classList.add("invisibility");
     case "no-sugar":
       console.log("no sugar");
       switch(newMilkiness) {
         case "condensed":
           console.log("invalid! condensed milk has sugar");
+          console.log(errorBean);
+          errorBean.classList.remove("invisibility");
           break;
         default:
           kopiName.textContent += " Kosong";
+          sugarCubes.style.opacity = "0";
           break;
       }
       break;
     case "less-sugar":
       console.log("less sugar");
       kopiName.textContent += " Siu Dai";
+      console.log(sugarCubes);
+      sugarCubes.style.opacity = "1";
+      sugarCubes.style.boxShadow = "none";
       break;
     case "normal-sugar":
-      console.log("normal sugar");
       kopiName.textContent += "";
+      sugarCubes.style.opacity = "1";
+      sugarCubes.style.boxShadow = "40px -20px 0 #d9dbde";
       break;
     case "extra-sugar":
-      console.log("extra sugar");
       kopiName.textContent += " Gah Dai";
+      sugarCubes.style.opacity = "1";
+      sugarCubes.style.boxShadow = "40px -20px 0 #d9dbde, 40px 20px 0 #d9dbde";
       break;
+    
       }
+      
 
 
 

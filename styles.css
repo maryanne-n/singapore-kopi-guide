@@ -3,12 +3,30 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 16px;
   box-sizing: border-box;
-  font-family: "Open Sans";
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
   --main-text-color: #2a2a2a;
   --sec-text-color: #35281E;
   --light-text-color: #f2f2f2;
+}
+
+.introduction {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+h1 {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  margin: 0;
+}
+
+.introduction p {
+  font-size: 1.8rem;
+  margin: 0;
 }
 
 .wrapper {
@@ -30,7 +48,6 @@ html {
   flex-direction: column;
   flex-basis: 0;
   flex-grow: 1;
-  height: 100vh;
   justify-content: center;
 }
 
@@ -93,7 +110,6 @@ legend {
   margin: 10px;
   background-color: yellow;
   transition: all 250ms ease;
-  text-align: center;
   height: 60px;
   cursor: pointer;
   font-weight: 900;
@@ -102,10 +118,11 @@ legend {
   transform: translateY(10px);
 }
 .box span {
-  padding: 20px;
   transition: all 300ms ease;
-  font-size: 1.5em;
+  font-size: 1.2rem;
   user-select: none;
+  align-self: center;
+  text-align: center;
   color: green;
   display: block;
   margin: auto;
@@ -122,6 +139,7 @@ legend {
 }
 .box label {
   height: 100%;
+  display: flex;
 }
 
 #result {
@@ -335,7 +353,7 @@ legend {
   margin: 20px;
 }
 
-.sugar {
+#sugar {
   width: 28px;
   height: 28px;
   background-color: #d9dbde;
@@ -345,7 +363,54 @@ legend {
   left: 30px;
   top: -10px;
   position: absolute;
-  box-shadow: 40px -20px 0 #d9dbde, 40px 20px 0 #d9dbde;
+  box-shadow: 40px -20px 0 #d9dbde;
+}
+
+#error-bean {
+  width: 80px;
+  height: 100px;
+  transform: rotate(10deg);
+  position: relative;
+}
+
+.invisibility {
+  visibility: hidden;
+}
+
+.bean {
+  width: 50px;
+  height: 70px;
+  border-radius: 40px/55px;
+  shape-outside: ellipse(35% 40% at 50% 50%);
+  clip-path: ellipse(35% 40% at 50% 50%);
+  background-color: white;
+  position: absolute;
+}
+
+.bean-clip {
+  clip-path: circle(60px at center);
+}
+
+.split {
+  mask-clip: content-box;
+  -webkit-mask-clip: content;
+  width: 50px;
+  height: 70px;
+  border-left: 2px solid pink;
+  border-radius: 40px/55px;
+  position: absolute;
+}
+
+.split1 {
+  transform: rotate(40deg);
+  top: -25px;
+  left: 23px;
+}
+
+.split2 {
+  top: 25px;
+  left: -26px;
+  transform: rotate(40deg) scaleX(-1);
 }
 
 /*# sourceMappingURL=styles.css.map */
